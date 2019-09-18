@@ -1,6 +1,6 @@
 # PCO Group Member Exports Overview
 
-The goal for this project is to easily export members of all active groups to perform some analysis and reporting on the data.
+The goal for this project is to easily export members of all active groups from Planning Center Online (PCO) so that we may perform some analysis and reporting on the data.
 
 This python script:
 1. Gets all active groups
@@ -77,3 +77,17 @@ python exportGroupMembers.py
 As it runs, it'll share each group name and member name in the console, along with each API call being made, just for reference.
 
 This script will export the contents to `groupsExport.csv`. This file is not included in the git repo.
+
+## Postman Scripts
+
+You will find the Postman file in the folder `\postman` for each PCO and Google API call. Learn more about [Postman](https://www.getpostman.com/).
+
+# About
+
+This repo, like much on github came from a need. My name is David Lozzi, I volunteer at my church and recently we moved to PCO from CCB. After we settled into PCO, we wanted to learn more about our Groups and the span and reach of them, along with a way to analyze the data to identify areas for improvement, i.e. new locations, better times, etc.
+
+I greatly welcome any contributions and improvements!
+
+# Contributing
+
+I adore those who want to support the community. Please do contribute! Simply fork from this repo, do your thing, and submit a pull request!

@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "e58ca21d-83cb-4da1-99a9-6d2f7b6c7537",
+		"name": "PCO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "People",
+			"item": [
+				{
+					"name": "List - Active Group Members",
+					"item": [
+						{
+							"name": "active group members",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/people/v2/lists/1111",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"people",
+										"v2",
+										"lists",
+										"1111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "run (refresh)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/people/v2/lists/1111/run",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"people",
+										"v2",
+										"lists",
+										"1111",
+										"run"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "people",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/people/v2/lists/1111/people",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"people",
+										"v2",
+										"lists",
+										"1111",
+										"people"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "lists",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.planningcenteronline.com/people/v2/lists",
+							"protocol": "https",
+							"host": [
+								"api",
+								"planningcenteronline",
+								"com"
+							],
+							"path": [
+								"people",
+								"v2",
+								"lists"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.planningcenteronline.com/people/v2/people/1111",
+							"protocol": "https",
+							"host": [
+								"api",
+								"planningcenteronline",
+								"com"
+							],
+							"path": [
+								"people",
+								"v2",
+								"people",
+								"1111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "maritalStatus",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.planningcenteronline.com/people/v2/marital_statuses/1111",
+							"protocol": "https",
+							"host": [
+								"api",
+								"planningcenteronline",
+								"com"
+							],
+							"path": [
+								"people",
+								"v2",
+								"marital_statuses",
+								"1111"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.planningcenteronline.com/people/v2/people/1111/addresses",
+							"protocol": "https",
+							"host": [
+								"api",
+								"planningcenteronline",
+								"com"
+							],
+							"path": [
+								"people",
+								"v2",
+								"people",
+								"1111",
+								"addresses"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Groups",
+			"item": [
+				{
+					"name": "details",
+					"item": [
+						{
+							"name": "details",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/groups/v2/groups/1111",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"groups",
+										"v2",
+										"groups",
+										"1111"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "people",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/groups/v2/groups/1111/people",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"groups",
+										"v2",
+										"groups",
+										"1111",
+										"people"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "memberships",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/groups/v2/groups/1111/memberships",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"groups",
+										"v2",
+										"groups",
+										"1111",
+										"memberships"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "location",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://api.planningcenteronline.com/groups/v2/groups/1111/location",
+									"protocol": "https",
+									"host": [
+										"api",
+										"planningcenteronline",
+										"com"
+									],
+									"path": [
+										"groups",
+										"v2",
+										"groups",
+										"1111",
+										"location"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "groups",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.planningcenteronline.com/groups/v2/groups/1111",
+							"protocol": "https",
+							"host": [
+								"api",
+								"planningcenteronline",
+								"com"
+							],
+							"path": [
+								"groups",
+								"v2",
+								"groups",
+								"1111"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Google Maps",
+			"item": [
+				{
+					"name": "address",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://maps.googleapis.com/maps/api/geocode/json?key=get_yer_own_key&address=woburn, ma 01887",
+							"protocol": "https",
+							"host": [
+								"maps",
+								"googleapis",
+								"com"
+							],
+							"path": [
+								"maps",
+								"api",
+								"geocode",
+								"json"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "get_yer_own_key"
+								},
+								{
+									"key": "address",
+									"value": "woburn, ma 01887"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "get_from_PCO",
+				"type": "string"
+			},
+			{
+				"key": "password",
+				"value": "get_from_PCO",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "da87082f-1998-4fa4-866c-2fa5f40d0e72",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7220a69a-b77e-4fa0-b66b-d1229bccf0da",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
