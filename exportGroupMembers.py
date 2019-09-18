@@ -1,82 +1,9 @@
-import requests
-from geopy import distance
+from groups import groups
+from people import people
+from maps import maps
 import config
 import time
-
-# APIS
-class api:
-  def get(self, url):
-    print("        " + url)
-    resp = requests.get(
-      url,
-      auth=(config.API_USERNAME, config.API_PASSWORD)
-    )
-
-    if resp.status_code != 200:
-      print(resp.text)
-      print(url)
-
-    return resp.json()
-
-class groups:
-  groupUrl = 'https://api.planningcenteronline.com/groups/v2/groups'
-  groupId = ""
-  locationUrl = ""
-
-  def __init__(self, grpId):
-    self.groupId = grpId
-  def getAll(self):
-    return api().get('%s?per_page=100' % (self.groupUrl))
-  def getDetails(self):
-    resp = api().get('%s/%s' % (self.groupUrl, self.groupId))
-    self.locationUrl = resp["data"]["links"]["location"]
-    return resp
-  def getMembers(self):
-    return api().get('%s/%s/memberships' % (self.groupUrl, self.groupId))
-  def getLocation(self):
-    if self.locationUrl == None:
-      return None
-    else:
-      return api().get(self.locationUrl)
-
-class people:
-  peopleUrl = 'https://api.planningcenteronline.com/people/v2/people'
-  peopleId = ''
-  maritalUrl = ''
-  addressUrl = ''
-
-  def __init__(self, peepId):
-    self.peopleId = peepId
-  def getPerson(self):
-    resp = api().get('%s/%s' % (self.peopleUrl, self.peopleId))
-    self.maritalUrl = resp["data"]["links"]["marital_status"]
-    self.addressUrl = resp["data"]["links"]["addresses"]
-    return resp
-  def getMaritalStatus(self):
-    if self.maritalUrl == None:
-      return None
-    else:
-      return api().get(self.maritalUrl)
-  def getAddress(self):
-    if self.addressUrl == None:
-      return None
-    else :
-      return api().get(self.addressUrl)
-
-class maps:
-  mapUrl = 'https://maps.googleapis.com/maps/api/geocode/json?key=%s' % (config.GOOGLE_APIKEY)
-  address = ''
-  addresses = {}
-
-  def __init__(self, address):
-    self.address = address
-  def getLocation(self):
-    if self.address not in self.addresses:
-      resp = api().get('%s&address=%s' % (self.mapUrl, self.address))
-      self.addresses[self.address] = resp["results"][0]["geometry"]["location"]# expects { "lat": 00.000, "lng": 00.000 }
-    
-    return self.addresses[self.address]
-
+from geopy import distance
 
 outputFile = open("groupsExport.csv", "w+")
 # add new columns to csvHeader AND update the number of columns in csvPlaceholder

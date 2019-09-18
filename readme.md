@@ -15,7 +15,9 @@ The CSV will include the following columns:
  * Last Name ![PCO People][people]
  * Gender ![PCO People][people]
  * Birthdate ![PCO People][people]
- * Location ![PCO People][people]
+ * City ![PCO People][people]
+ * State ![PCO People][people]
+ * Zip ![PCO People][people]
  * Location Long ![Google Maps][maps]
  * Location Lat ![Google Maps][maps]
  * Distance to Group
