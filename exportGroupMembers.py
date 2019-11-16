@@ -24,6 +24,10 @@ for grp in groupsList["data"]:
     groupAddress = grpLocation["data"]["attributes"]["full_formatted_address"].replace("\n", ", ")
     groupLong = grpLocation["data"]["attributes"]["longitude"]
     groupLat = grpLocation["data"]["attributes"]["latitude"]
+  else:
+    groupAddress = ""
+    groupLong = ""
+    groupLat = ""
 
   for member in members["data"]:
     # try:
@@ -39,7 +43,11 @@ for grp in groupsList["data"]:
           address["attributes"]["state"] if address["attributes"]["state"] != None else '',
           address["attributes"]["zip"] if address["attributes"]["zip"] != None else ''))
         mapLocation = mapApi.getLocation()
-        memberDistance = distance.distance((groupLat, groupLong),(mapLocation["lat"], mapLocation["lng"])).miles
+        if grpLocation != None:
+          distanceUnit = config.UNIT if hasattr(config, 'UNIT') else 'miles'
+          memberDistance = eval('distance.distance((groupLat, groupLong),(mapLocation["lat"], mapLocation["lng"])).' + distanceUnit)
+        else:
+          memberDistance = ""
 
       outputFile.write(csvPlaceholder % (
         person["data"]["attributes"]["first_name"],
