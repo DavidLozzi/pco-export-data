@@ -62,6 +62,12 @@ API_PASSWORD = 'specify your password'
 GOOGLE_APIKEY = 'specify your Google API key'
 ```
 
+Optionally, you can also specify the unit distance used in the calculations (default is miles, available options listed [here](https://geopy.readthedocs.io/en/stable/#geopy.point.Point.from_string)):
+
+```
+UNIT = 'km'
+```
+
 Learn how to obtain a [Google API Key](https://developers.google.com/maps/documentation/geocoding/get-api-key).
 
 _**NOTE** The config.py file is ignored by git._
